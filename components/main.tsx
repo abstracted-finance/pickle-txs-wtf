@@ -135,6 +135,7 @@ const Main = () => {
               {timelockNames[to]}
             </Link>
           ),
+          blocknumber: blockNumber,
           timestamp: moment(timestamp * 1000).from(Date.now()),
           target: decodedFunction.params[0].value,
           value: decodedFunction.params[1].value,
@@ -336,6 +337,7 @@ const Main = () => {
               ) as any
             }
           />
+          <Table.Column prop="blocknumber" label="blocknumber" />
           <Table.Column prop="to" label="to" />
           <Table.Column prop="timestamp" label="timestamp" />
           <Table.Column prop="target" label="target" />
